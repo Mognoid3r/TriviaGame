@@ -12,47 +12,115 @@
 
 <body>
 
-<div class="timer">00:00</div>
+    <div id="timer" value="0" max="30" class="timer">00:00</div>
+
+
 
     <div class="grid">
         <div class="header">
             <h1>Totally Trivial Trivia!</h1>
-            <hr>
-            <br>
-            <div class="questionOne"><h3>What came first: the chicken or the egg?</h3></div>
-            <form>
-                <input type="radio" name="gender" value="male" checked> Chicken<br>
-                <input type="radio" name="gender" value="female"> Egg<br>
-                <input type="radio" name="gender" value="other"> Other
-            </form>
-            <br>
-            <div class="questionTwo" id="wins"><h3>Whats 7 + 11?</h3></div>
-            <form>
-                    <input type="radio" name="gender" value="male" checked> A convenient store<br>
-                    <input type="radio" name="gender" value="female"> 18<br>
-                    <input type="radio" name="gender" value="other"> Possibly both
-                </form>
-                <br>
-            <div class="questionThree" id="loses"><h3>Are tacos and tortas essentially the same thing?</h3></div>
-            <form>
-                    <input type="radio" name="gender" value="male" checked> No tacos are tacos<br>
-                    <input type="radio" name="gender" value="female"> Whats a torta?<br>
-                    <input type="radio" name="gender" value="other"> Yes they're the same, duh!
-                </form>
-                <br>
-            <div class="questionFour" id="random-number"><h3>Rank how damaged your fragile sensibilities are after participating on this quiz</h3></div>
-            <form>
-                    <input type="radio" name="gender" value="male" checked> My Pride is RUINED!<br>
-                    <input type="radio" name="gender" value="female"> I'll cry myself to sleep tonight<br>
-                    <input type="radio" name="gender" value="other"> Tacos?
-                </form>
-                <br>
+        
+
+
+            <table class="tableArea">
+                <tr>
+                    <td>
+                        <div class="questionOne">
+                            <p class="question">1. What came first: the chicken or the egg?</p>
+                            <ul>
+                                <input class="answer" type="radio" name="q1" value="1">
+                                <label id="correctString1">Omelette</label>
+                                <br>
+                                <input class="answer" type="radio" name="q1" value="0">
+                                <label>Egg</label>
+                                <br>
+                                <input class="answer" type="radio" name="q1" value="0">
+                                <label>Chicken</label>
+                                <br>
+                                <input class="answer" type="radio" name="q1" value="0">
+                                <label>Other</label>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="questionTwo">
+                            <p class="question">2. What weighs more: </p>
+                            <ul>
+                                <input class="answer" type="radio" name="q2" value="0">
+                                <label>A pound of muscle</label>
+                                <br>
+                                <input class="answer" type="radio" name="q2" value="1">
+                                <label id="correctString2">A quarter pounder with cheese</label>
+                                <br>
+                                <input class="answer" type="radio" name="q2" value="0">
+                                <label>A pound of brain</label>
+                                <br>
+                                <input class="answer" type="radio" name="q2" value="0">
+                                <label>1 kilo</label>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="questionThree">
+                            <p class="question">3. Which of these is clearly the best?</p>
+                            <ul>
+                                <input class="answer" type="radio" name="q3" value="0">
+                                <label>Cats</label>
+                                <br>
+                                <input class="answer" type="radio" name="q3" value="1">
+                                <label id="correctString3">Aliens</label>
+                                <br>
+                                <input class="answer" type="radio" name="q3" value="0">
+                                <label>Dogs</label>
+                                <br>
+                                <input class="answer" type="radio" name="q3" value="0">
+                                <label>Monkeys</label>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="questionFour">
+                            <p class="question">4. Elon musk is:</p>
+                            <ul>
+                                <input class="answer" type="radio" name="q4" value="0">
+                                <label>A mad-lad</label>
+                                <br>
+                                <input class="answer" type="radio" name="q4" value="1">
+                                <label id="correctString4">All of the above</label>
+                                <br>
+                                <input class="answer" type="radio" name="q4" value="0">
+                                <label>A meme god</label>
+                                <br>
+                                <input class="answer" type="radio" name="q4" value="0">
+                                <label>No longer the CEO of Tesla</label>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <div class="submitter">
+                <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+            </div>
+
+            <!--show only wrong answers on submit-->
+            <div class="quizAnswers" id="correctAnswer1"></div>
+            <div class="quizAnswers" id="correctAnswer2"></div>
+            <div class="quizAnswers" id="correctAnswer3"></div>
+            <div class="quizAnswers" id="correctAnswer4"></div>
+
+            <!--show score upon submit-->
+            <div>
+                <h2 class="quizScore" id="userScore"></h2>
+            </div>
         </div>
     </div>
 
 
 
-    <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
