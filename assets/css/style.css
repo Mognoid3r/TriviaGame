@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+} 
+
+body {
+    background-image: url("../images/background2.jpg");
+    background-size: 500px 850px;
+    background-repeat: no-repeat;
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #333;
+    
+}
+
+.grid {
+    position: relative;
+    top: 3%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "header header"
+    "tableArea tableArea"
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    color: white;
+    background-color: blue; opacity: .5;
+     
+    }
+
+.tableArea {
+    grid-area: tableArea;
+    grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "td"
+        "td"
+        "td"
+        "td"
+}
+
+tr td {
+    grid-area: tr;
+}
+
+h3 {
+    color: gold;
+}
+
+.timer {
+    position: fixed;
+    font-size: 9px;
+    background-color: yellow;
+    border-radius: 10%;
+    z-index: 2;
+}
+
+.questionOne {
+    grid-area: questionOne;
+}
+
+.questionTwo {
+    grid-area: questionTwo;
+}
+
+.questionThree {
+    grid-area: questionThree;
+}
+
+.questionFour {
+    grid-area: questionFour;
+}
+
+.question{
+	font-weight: 600;
+}
+.answers {
+    margin-bottom: 20px;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #297;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #3a8;
+} 
+
+ @media screen and (min-width: 500px) 
+  {
+    * {
+        padding: 0;
+        margin: 0;
+        
+    } 
+    
+    body {
+        background-image: url("../images/background1.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .timer {
+        position: fixed;
+        left: 35px;
+        font-size: 16px;
+        background-color: yellow;
+        border-radius: 10%;
+        z-index: 2;
+    }
+    
+
+}
+
